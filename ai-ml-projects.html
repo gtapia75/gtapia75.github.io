@@ -10,11 +10,7 @@
     <header>
         <h1>AI/ML Projects</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <button onclick="window.location.href='index.html'" class="back-btn">Back to Home</button>
         </nav>
     </header>
 
@@ -22,44 +18,29 @@
         <h2>AI/ML Implementations</h2>
 
         <div class="project-card2">
-            <h3>🔍 Predictive Analytics for User Engagement</h3>
-            <p><strong>Overview:</strong> Developed a machine learning model to predict user engagement based on website interaction data.</p>
+            <h3>🛠 RAG Implementation with Python and Anthropic</h3>
+            <p><strong>Overview:</strong> Implemented a Retrieval-Augmented Generation (RAG) system using Python, integrating Anthropic's Claude API for language model capabilities along with various other technologies for document processing and vector search.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Document processing and text extraction from PDFs.</li>
+                <li>Text chunking for optimal context handling.</li>
+                <li>Vector storage and semantic search using ChromaDB.</li>
+                <li>Integration with Anthropic's Claude API for enhanced responses.</li>
+                <li>Support for metadata and URL preservation.</li>
+            </ul>
             <p><strong>Challenges & Complexity:</strong></p>
             <ul>
-                <li>Processed and cleaned large datasets with millions of rows.</li>
-                <li>Dealt with class imbalance issues in the training data.</li>
-            </ul>
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Used techniques like <strong>SMOTE</strong> to handle class imbalances.</li>
-                <li>Deployed a Random Forest model with a custom feature selection process.</li>
+                <li>Processed PDF files and created text chunks.</li>
+                <li>Stored vectors in ChromaDB and identified similar chunks for user queries.</li>
             </ul>
             <p><strong>Impact & Achievements:</strong></p>
             <ul>
-                <li>Achieved a <strong>75% increase</strong> in the accuracy of engagement predictions.</li>
-                <li>Provided actionable insights that improved user retention by <strong>15%</strong>.</li>
+                <li>Leveraged specialized data sources to provide context to the LLM, reducing hallucination risks.</li>
+                <li>Provided structured responses using Anthropic's NLP capabilities.</li>
             </ul>
+            <p><a href="https://github.com/gtapia75/RAG_Project" target="_blank">View Project on GitHub</a></p>
         </div>
 
-        <div class="project-card2">
-            <h3>📊 Sentiment Analysis for Customer Feedback</h3>
-            <p><strong>Overview:</strong> Implemented a sentiment analysis system to classify customer feedback into positive, negative, or neutral sentiments.</p>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Handled noisy and unstructured text data.</li>
-                <li>Ensured accurate sentiment classification across multiple languages.</li>
-            </ul>
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Used NLP techniques like <strong>tokenization, stopword removal</strong>, and <strong>TF-IDF vectorization</strong>.</li>
-                <li>Trained a <strong>Logistic Regression</strong> model with cross-validation for optimal accuracy.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Achieved a sentiment classification accuracy of <strong>85%</strong>.</li>
-                <li>Enabled faster identification of customer pain points, reducing response times by <strong>20%</strong>.</li>
-            </ul>
-        </div>
 
     </section>
 
