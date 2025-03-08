@@ -89,6 +89,10 @@ h2 {
     color: #2c5282;
 }
 
+.responsive-image{
+    width:50%;
+    height:auto:
+}
 
 section {
     margin: 40px 0;
