@@ -20,6 +20,36 @@
         <h2>AI/ML Implementations</h2>
 
         <div class="project-card2">
+            <h3>🎥 Video Retrieval-Augmented Generation (Video RAG) with AWS & OpenAI</h3>
+            <p><strong>Overview:</strong> Designed and implemented a multimodal Video RAG proof-of-concept that enables semantic search over video content using natural language queries. The system processes short videos stored in Amazon S3 by extracting representative frames, generating multimodal embeddings with Amazon Bedrock Titan models, and storing them in a vector database for efficient retrieval. The solution optionally integrates OpenAI vision models to generate human-readable explanations of retrieved video segments.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Processes video files from Amazon S3 and extracts timestamped frames using OpenCV.</li>
+                <li>Generates multimodal embeddings (text ↔ image shared space) with Amazon Bedrock Titan.</li>
+                <li>Stores frame embeddings in ChromaDB to support similarity search at scale.</li>
+                <li>Enables text-based queries such as “find scenes with a beach” or “show moments with cars”.</li>
+                <li>Returns relevant video frames along with their corresponding timestamps.</li>
+		<li>Optional OpenAI vision integration to summarize or explain retrieved frames.</li>
+            </ul>
+            <p><strong>Challenges & Complexity:</strong></p>
+            <ul>
+		<li>Balancing semantic coverage and cost through configurable frame sampling strategies.</li>
+		<li>Designing stable frame identifiers to avoid redundant embeddings and control API usage.</li>
+		<li>Handling corrupted frames or partial failures without interrupting ingestion.</li>
+		<li>Structuring the pipeline to be notebook-friendly while remaining portable to production architectures.</li>
+            </ul>
+            <p><strong>Impact & Achievements:</strong></p>
+            <ul>
+		<li>Demonstrated effective semantic search across video content without manual tagging.</li>
+		<li>Enabled precise localization of relevant moments within videos using timestamps.</li>
+		<li>Established a reusable multimodal pipeline that can be extended to audio analysis, scene detection, and long-form video understanding.</li>
+		<li>Serves as a foundation for scalable video intelligence applications and advanced RAG systems.</li>
+            </ul>
+            <p><a href="https://github.com/gtapia75/s3-bedrock-video-rag" target="_blank">View Project on GitHub</a></p>
+        </div>
+
+
+        <div class="project-card2">
             <h3>🖼️ Multimodal Image Retrieval (RAG) with AWS & OpenAI</h3>
             <p><strong>Overview:</strong> Built a state-of-the-art multimodal Retrieval-Augmented Generation (RAG) system that enables semantic image search from a large collection of photos stored in Amazon S3. The system uses Amazon Bedrock Titan multimodal embeddings to map images and text into a shared vector space, stores them in ChromaDB, and returns the most relevant images for a user’s natural language query. Optionally, the system generates descriptive summaries of results using OpenAI Vision models.</p>
             <p><strong>Features:</strong></p>
