@@ -20,6 +20,34 @@
         <h2>AI/ML Implementations</h2>
 
         <div class="project-card2">
+            <h3>🖼️ Multimodal Image Retrieval (RAG) with AWS & OpenAI</h3>
+            <p><strong>Overview:</strong> Built a state-of-the-art multimodal Retrieval-Augmented Generation (RAG) system that enables semantic image search from a large collection of photos stored in Amazon S3. The system uses Amazon Bedrock Titan multimodal embeddings to map images and text into a shared vector space, stores them in ChromaDB, and returns the most relevant images for a user’s natural language query. Optionally, the system generates descriptive summaries of results using OpenAI Vision models.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Downloads and normalizes images (JPEG/PNG) from an S3 bucket.</li>
+                <li>Generates robust multimodal embeddings (shared space for text & images) using Amazon Bedrock Titan models.</li>
+                <li>Stores vectors in a persistent vector database (ChromaDB) for scalable semantic search.</li>
+                <li>Supports natural language queries such as “Find images with a blue car” or “Show cars on the beach”.</li>
+                <li>Optional integration with OpenAI Vision models to produce human-readable summaries referencing labeled image results.</li>
+            </ul>
+            <p><strong>Challenges & Complexity:</strong></p>
+            <ul>
+                <li>Handling a heterogeneous image dataset and preventing embedding model failures via normalization.</li>
+                <li>Designing efficient batching and caching strategies to control API usage costs.</li>
+		<li>Building a retrieval interface that gracefully handles ambiguous or partial queries.</li>
+            </ul>
+            <p><strong>Impact & Achievements:</strong></p>
+            <ul>
+                <li>Demonstrated seamless semantic image search across thousands of images using simple natural language.</li>
+                <li>Reduced false matches and improved relevance through multimodal embeddings.</li>
+                <li>Enabled interpretable outputs by combining retrieval with generative vision summaries.</li>
+                <li>Provides a foundation for extending the same pipeline to video RAG and multimodal search apps.</li>
+            </ul>
+            <p><a href="https://github.com/gtapia75/s3-bedrock-text-rag" target="_blank">View Project on GitHub</a></p>
+        </div>
+
+
+        <div class="project-card2">
             <h3>🛠 RAG Implementation with Python and Anthropic</h3>
             <p><strong>Overview:</strong> Implemented a Retrieval-Augmented Generation (RAG) system using Python, integrating Anthropic's Claude API for language model capabilities along with various other technologies for document processing and vector search.</p>
             <p><strong>Features:</strong></p>
