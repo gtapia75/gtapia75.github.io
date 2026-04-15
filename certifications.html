@@ -8,56 +8,95 @@
     <script src="https://cdn.amplitude.com/script/9fde69174862e95197b03905ce13779e.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('9fde69174862e95197b03905ce13779e', {"fetchRemoteConfig":true,"autocapture":true});</script>
 </head>
 <body>
-    <header>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Gerardo Tapia Cruz</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#certifications">Certifications</a></li>
+                <li><a href="index.html#ai-ml">AI/ML</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="subpage-header">
+        <button onclick="window.location.href='index.html'" class="btn-back">&larr; Back to Home</button>
         <h1>Certifications</h1>
-        <nav>
-            <button onclick="window.location.href='index.html'" class="back-btn">Back to Home</button>
-        </nav>
+        <p>Professional credentials in cloud, data science, machine learning, and process improvement</p>
     </header>
 
-    <section id="projects">
-        <h2>Certifications</h2>
-
-        <div class="project-card2">
-            <h3>Data Science and Machine Learning: Making Data-Driven Decisions by MTI IDSS</h3>
-            <img src="images/MIT_DataScience.jpg"class="responsive-image" alt="MIT Data Science Certification">
+    <!-- Certifications Grid -->
+    <section>
+        <div class="container">
+            <div class="cert-grid">
+                <div class="cert-card fade-in">
+                    <img src="images/MIT_DataScience.jpg" alt="MIT Data Science Certification">
+                    <h3>Data Science and Machine Learning: Making Data-Driven Decisions &ndash; MIT IDSS</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/UCLA_DataScience.jpg" alt="UCLA Data Science Certification">
+                    <h3>Data Science &ndash; UCLA</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/AWS_CloudPractitioner.jpg" alt="AWS Cloud Practitioner Certification">
+                    <h3>Cloud Practitioner &ndash; AWS</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/Scrum_SPOC.jpg" alt="Scrum Product Owner Certification">
+                    <h3>Scrum Product Owner Certified &ndash; SCRUMStudy</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/Scrum_fundamentals.jpg" alt="Scrum Fundamentals Certification">
+                    <h3>Scrum Fundamentals Certified &ndash; SCRUMStudy</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/SixSigma_YellowBelt.jpg" alt="Six Sigma Yellow Belt Certification">
+                    <h3>Six Sigma Yellow Belt &ndash; SixSigmaStudy</h3>
+                </div>
+                <div class="cert-card fade-in">
+                    <img src="images/ITIL_Foundations.jpg" alt="ITIL Foundation Certification">
+                    <h3>ITIL Foundation Certificate in IT Service Management &ndash; PeopleCERT</h3>
+                </div>
+            </div>
         </div>
-
-        <div class="project-card2">
-            <h3>Data Science by UCLA</h3>
-            <img src="images/UCLA_DataScience.jpg"class="responsive-image" alt="UCLA Data Science Certification">
-        </div>
-
-        <div class="project-card2">
-            <h3>Cloud Practitioner by AWS</h3>
-            <img src="images/AWS_CloudPractitioner.jpg"class="responsive-image" alt="AWS Clod Practitioner Certification">
-        </div>
-
-        <div class="project-card2">
-            <h3>Scrum Product Owner Certified by SCRUMStudy</h3>
-            <img src="images/Scrum_SPOC.jpg"class="responsive-image" alt="SCRUM Product Owner Certification">
-        </div>
-
-        <div class="project-card2">
-            <h3>Scrum Fundamentals Certified by SCRUMStudy</h3>
-            <img src="images/Scrum_fundamentals.jpg"class="responsive-image" alt="SCRUM Fundamentals Certification">
-        </div>
-
-        <div class="project-card2">
-            <h3>Six Sigma Yellow Belt by SixSigmaStudy</h3>
-            <img src="images/SixSigma_YellowBelt.jpg"class="responsive-image" alt="Sig Sgma Yellow Belt Certification">
-        </div>
-
-        <div class="project-card2">
-            <h3>ITIL Foundation Certificate in IT Service Management by PeopleCERT</h3>
-            <img src="images/ITIL_Foundations.jpg"class="responsive-image" alt="ITIL Certification">
-        </div>
-
-        
     </section>
 
+    <!-- Footer -->
     <footer>
-            <p>© 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#certifications">Certifications</a>
+                <a href="ai-ml-projects.html">AI/ML</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    (function(){
+        var toggle = document.getElementById('navToggle');
+        var links = document.getElementById('navLinks');
+        if(toggle && links){
+            toggle.addEventListener('click', function(){ links.classList.toggle('open'); });
+            links.addEventListener('click', function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
+        }
+        var observer = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, {threshold:0.1});
+        document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    })();
+    </script>
+
 </body>
 </html>

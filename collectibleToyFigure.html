@@ -9,37 +9,53 @@
     <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('9fde69174862e95197b03905ce13779e', {"fetchRemoteConfig":true,"autocapture":true});</script>
 </head>
 <body>
-    <header>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Gerardo Tapia Cruz</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#certifications">Certifications</a></li>
+                <li><a href="index.html#ai-ml">AI/ML</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="subpage-header">
+        <button onclick="window.location.href='ai-ml-projects.html'" class="btn-back">&larr; Back to AI/ML Projects</button>
         <h1>Collectible Toy Figure Prompts</h1>
-        <nav>
-            <button onclick="window.location.href='index.html'" class="back-btn">Back to Home</button>
-        </nav>
+        <p>Creative AI image generation prompts for personalized action figure designs</p>
     </header>
 
-    <section id="projects">
-        <h2>Prompts</h2>
+    <!-- Prompts -->
+    <section>
+        <div class="container">
 
-        <div class="project-card2">
-            <h3>🛠 Professional Action Figure</h3>
-            <p><strong>Prompt: </strong><br>
-                Create an image of a collectible action figure of [YOUR NAME] as a [YOUR PROFESSION] in a sealed plastic blister pack with cardboard backing. The figure should be:
-                <br>
+            <div class="project-card fade-in">
+                <h3>Professional Action Figure</h3>
+                <p><strong>Prompt:</strong></p>
+                <p>Create an image of a collectible action figure of [YOUR NAME] as a [YOUR PROFESSION] in a sealed plastic blister pack with cardboard backing. The figure should be:</p>
                 <ul>
-                <li>Based on my professional headshot (when using photo-enabled AI tools)</li>
-                <li>Wearing [DESCRIBE YOUR TYPICAL WORK OUTFIT]</li>
-                <li>Positioned confidently with [DESCRIBE POSE OR EXPRESSION]</li>
-                <li>Displayed in a blister pack with a [DESCRIBE BACKGROUND COLOR/THEME] backdrop</li>
-                <li>Including my name "[YOUR NAME]" at the top and "[YOUR TITLE/TAGLINE]" below it</li>
+                    <li>Based on my professional headshot (when using photo-enabled AI tools)</li>
+                    <li>Wearing [DESCRIBE YOUR TYPICAL WORK OUTFIT]</li>
+                    <li>Positioned confidently with [DESCRIBE POSE OR EXPRESSION]</li>
+                    <li>Displayed in a blister pack with a [DESCRIBE BACKGROUND COLOR/THEME] backdrop</li>
+                    <li>Including my name "[YOUR NAME]" at the top and "[YOUR TITLE/TAGLINE]" below it</li>
                 </ul>
-                <br>
-                Include these accessories in separate compartments:
+                <p>Include these accessories in separate compartments:</p>
                 <ul>
-                <li>[WORK TOOL #1 - be specific]</li>
-                <li>[WORK TOOL #2 - be specific]</li>
-                <li>[PERSONAL ITEM that represents your work style]</li>
+                    <li>[WORK TOOL #1 - be specific]</li>
+                    <li>[WORK TOOL #2 - be specific]</li>
+                    <li>[PERSONAL ITEM that represents your work style]</li>
                 </ul>
-                <br>
-                Style details:
+                <p>Style details:</p>
                 <ul>
                     <li>Make the figure slightly cartoonish but recognizable</li>
                     <li>Use bright, professional packaging</li>
@@ -47,66 +63,52 @@
                     <li>Aspect ratio: 4:5 (optimal for LinkedIn)</li>
                     <li>Style: Smooth, plastic-like finish with professional lighting</li>
                 </ul>
-            </p>
-            <p><strong>Tips: </strong></p>
-            <ul>
-                <li>Be specific about your accessories (not just "a laptop" but "a laptop displaying a Gantt chart").</li>
-                <li>Include something unique to your profession (TPMs might add a project timeline or methodology diagram)</li>
-                <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
-            </ul>
-            <p><strong>Result:</strong></p>
-            <center>
-                <img src="images/ProfessionalToyFigure.png"
-            </center>
-        </div>
-
-        <div class="project-card2">
-            <h3>🛠 Professional Action Figure in a set</h3>
-            <p><strong>Prompt: </strong><br>
-                Create a collectible action figure playset of "Gerardo Tapia - Tech Program Manager" in a full isometric view, showcasing a complete home office environment.
-                <br>
-                The scene includes:
+                <p><strong>Tips:</strong></p>
                 <ul>
-                <li>A toy-sized, stylized figure of a professional man (20% gray, 80% black hair, athletic build, wearing a button-up shirt with rolled-up sleeves and khaki pants). He is sitting down on an ergonomic working chair</li>
-                <li>A modern desk with a laptop open, displaying a colorful Gantt chart on the screen</li>
-                <li>Office accessories: coffee mug, headphones, notebook, smartphone, and a framed inspirational quote</li>
-                <li>Background elements like a bookshelf with tech books, a plant, a smart speaker, and a window with daylight</li>
-                <li>The entire set designed as a toy diorama, with smooth plastic textures and bright, clean colors</li>
-                <li>Include a nameplate: “Call in case of an Emergency” and skill tags: Collaboration, Data Expertise, Friendly, Experienced</li>
-                <li>Use a professional-style packaging mockup, with plastic blister sections housing the figure and accessories.</li>
-                <li>Camera angle: Isometric or slight perspective view to reveal the full set layout clearly</li>
-                <li>Art style: Slightly cartoonish, smooth and collectible plastic-like finish, clean lighting, sharp details – perfect for showcasing on a LinkedIn post or collector catalog</li>
-                <li>Aspect ratio: 4:5</li>
+                    <li>Be specific about your accessories (not just "a laptop" but "a laptop displaying a Gantt chart").</li>
+                    <li>Include something unique to your profession (TPMs might add a project timeline or methodology diagram).</li>
+                    <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
                 </ul>
-            </p>
-            <p><strong>Tips: </strong></p>
-            <ul>
-                <li>Do a detailed definition of the set.</li>
-                <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
-            </ul>
-            <p><strong>Result:</strong></p>
-            <center>
-                <img src="images/ProfessionalToyFigureSet.png">
-            </center>
-        </div>        
+                <p><strong>Result:</strong></p>
+                <img src="images/ProfessionalToyFigure.png" alt="Professional Toy Figure">
+            </div>
 
-        <div class="project-card2">
-            <h3>🛠 Athletic Action Figure</h3>
-            <p><strong>Prompt: </strong><br>
-                Create a collectible action figure of “Gerardo Tapia - The Athlete Edition,” designed in a sporty, outdoor-themed cardboard packaging.
-                <br>
-                The toy figure should feature:<br>
-                A stylized, toy-sized version of a fit and athletic man (20% gray, 80% black hair, friendly smile). Dressed in modern sportwear: sweatpants, athletic running shoes, and a moisture-wicking short-sleeve shirt. Accessories included in the blister pack:
+            <div class="project-card fade-in">
+                <h3>Professional Action Figure in a Set</h3>
+                <p><strong>Prompt:</strong></p>
+                <p>Create a collectible action figure playset of "Gerardo Tapia - Tech Program Manager" in a full isometric view, showcasing a complete home office environment. The scene includes:</p>
                 <ul>
-                <li>Soccer ball</li>
-                <li>A marathon bib (with a visible number)</li>
-                <li>Swim goggles and a water bottle</li>
+                    <li>A toy-sized, stylized figure of a professional man (20% gray, 80% black hair, athletic build, wearing a button-up shirt with rolled-up sleeves and khaki pants). He is sitting down on an ergonomic working chair</li>
+                    <li>A modern desk with a laptop open, displaying a colorful Gantt chart on the screen</li>
+                    <li>Office accessories: coffee mug, headphones, notebook, smartphone, and a framed inspirational quote</li>
+                    <li>Background elements like a bookshelf with tech books, a plant, a smart speaker, and a window with daylight</li>
+                    <li>The entire set designed as a toy diorama, with smooth plastic textures and bright, clean colors</li>
+                    <li>Include a nameplate: "Call in case of an Emergency" and skill tags: Collaboration, Data Expertise, Friendly, Experienced</li>
+                    <li>Use a professional-style packaging mockup, with plastic blister sections housing the figure and accessories</li>
+                    <li>Camera angle: Isometric or slight perspective view to reveal the full set layout clearly</li>
+                    <li>Art style: Slightly cartoonish, smooth and collectible plastic-like finish, clean lighting, sharp details</li>
+                    <li>Aspect ratio: 4:5</li>
                 </ul>
-                Background design printed on the cardboard should include an outdoor context:
-                <br>
-                A green park or running trail, blue sky with clouds, and a suggestion of a race track or soccer field in the background
-                <br>
-                Additional style and packaging details:
+                <p><strong>Tips:</strong></p>
+                <ul>
+                    <li>Do a detailed definition of the set.</li>
+                    <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
+                </ul>
+                <p><strong>Result:</strong></p>
+                <img src="images/ProfessionalToyFigureSet.png" alt="Professional Toy Figure Set">
+            </div>
+
+            <div class="project-card fade-in">
+                <h3>Athletic Action Figure</h3>
+                <p><strong>Prompt:</strong></p>
+                <p>Create a collectible action figure of "Gerardo Tapia - The Athlete Edition," designed in a sporty, outdoor-themed cardboard packaging. The toy figure should feature a stylized, toy-sized version of a fit and athletic man (20% gray, 80% black hair, friendly smile). Dressed in modern sportswear: sweatpants, athletic running shoes, and a moisture-wicking short-sleeve shirt. Accessories included in the blister pack:</p>
+                <ul>
+                    <li>Soccer ball</li>
+                    <li>A marathon bib (with a visible number)</li>
+                    <li>Swim goggles and a water bottle</li>
+                </ul>
+                <p>Background design printed on the cardboard should include an outdoor context: A green park or running trail, blue sky with clouds, and a suggestion of a race track or soccer field in the background.</p>
+                <p>Additional style and packaging details:</p>
                 <ul>
                     <li>Include his name "Gerardo Tapia" prominently at the top</li>
                     <li>Subtitle below: "Soccer | Running | Swimming"</li>
@@ -115,22 +117,47 @@
                     <li>Slightly cartoonish but highly detailed and clean, smooth plastic look</li>
                     <li>Aspect ratio: 4:5, with professional lighting and polished finish</li>
                 </ul>
-                Include printed skill tags or features on the box:<br>
-                “Endurance | Discipline | Focus | Team Spirit”
-            </p>
-            <p><strong>Tips: </strong></p>
-            <ul>
-                <li>Do a detailed definition of the set.</li>
-                <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
-            </ul>
-            <p><strong>Result:</strong></p>
-            <center>
-                <img src="images/AthleteEdition.png">
-            </center>
-        </div>        
+                <p>Include printed skill tags or features on the box: "Endurance | Discipline | Focus | Team Spirit"</p>
+                <p><strong>Tips:</strong></p>
+                <ul>
+                    <li>Do a detailed definition of the set.</li>
+                    <li>Add a personal touch that shows your working style (coffee cup, specific tools).</li>
+                </ul>
+                <p><strong>Result:</strong></p>
+                <img src="images/AthleteEdition.png" alt="Athlete Edition Toy Figure">
+            </div>
 
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#certifications">Certifications</a>
+                <a href="ai-ml-projects.html">AI/ML</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    (function(){
+        var toggle = document.getElementById('navToggle');
+        var links = document.getElementById('navLinks');
+        if(toggle && links){
+            toggle.addEventListener('click', function(){ links.classList.toggle('open'); });
+            links.addEventListener('click', function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
+        }
+        var observer = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, {threshold:0.1});
+        document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    })();
+    </script>
+
 </body>
 </html>

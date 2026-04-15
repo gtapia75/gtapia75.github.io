@@ -9,217 +9,240 @@
     <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('9fde69174862e95197b03905ce13779e', {"fetchRemoteConfig":true,"autocapture":true});</script>
 </head>
 <body>
-    <header>
-        <h1>AI/ML Projects</h1>
-        <nav>
-            <button onclick="window.location.href='index.html'" class="back-btn">Back to Home</button>
-        </nav>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Gerardo Tapia Cruz</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#certifications">Certifications</a></li>
+                <li><a href="index.html#ai-ml">AI/ML</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="subpage-header">
+        <button onclick="window.location.href='index.html'" class="btn-back">&larr; Back to Home</button>
+        <h1>AI &amp; Machine Learning Projects</h1>
+        <p>Proofs-of-concept and implementations bridging data science with enterprise applications</p>
     </header>
 
-    <section id="projects">
-        <h2>AI/ML Implementations</h2>
+    <!-- Projects -->
+    <section>
+        <div class="container">
 
-        <div class="project-card2">
-            <h3>🎥 Video Retrieval-Augmented Generation (Video RAG) with AWS & OpenAI</h3>
-            <p><strong>Overview:</strong> Designed and implemented a multimodal Video RAG proof-of-concept that enables semantic search over video content using natural language queries. The system processes short videos stored in Amazon S3 by extracting representative frames, generating multimodal embeddings with Amazon Bedrock Titan models, and storing them in a vector database for efficient retrieval. The solution optionally integrates OpenAI vision models to generate human-readable explanations of retrieved video segments.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Processes video files from Amazon S3 and extracts timestamped frames using OpenCV.</li>
-                <li>Generates multimodal embeddings (text ↔ image shared space) with Amazon Bedrock Titan.</li>
-                <li>Stores frame embeddings in ChromaDB to support similarity search at scale.</li>
-                <li>Enables text-based queries such as “find scenes with a beach” or “show moments with cars”.</li>
-                <li>Returns relevant video frames along with their corresponding timestamps.</li>
-		<li>Optional OpenAI vision integration to summarize or explain retrieved frames.</li>
-            </ul>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-		<li>Balancing semantic coverage and cost through configurable frame sampling strategies.</li>
-		<li>Designing stable frame identifiers to avoid redundant embeddings and control API usage.</li>
-		<li>Handling corrupted frames or partial failures without interrupting ingestion.</li>
-		<li>Structuring the pipeline to be notebook-friendly while remaining portable to production architectures.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-		<li>Demonstrated effective semantic search across video content without manual tagging.</li>
-		<li>Enabled precise localization of relevant moments within videos using timestamps.</li>
-		<li>Established a reusable multimodal pipeline that can be extended to audio analysis, scene detection, and long-form video understanding.</li>
-		<li>Serves as a foundation for scalable video intelligence applications and advanced RAG systems.</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/s3-bedrock-video-rag" target="_blank">View Project on GitHub</a></p>
-        </div>
+            <div class="project-card fade-in">
+                <h3>Video Retrieval-Augmented Generation (Video RAG) with AWS &amp; OpenAI</h3>
+                <p><strong>Overview:</strong> Designed and implemented a multimodal Video RAG proof-of-concept that enables semantic search over video content using natural language queries. The system processes short videos stored in Amazon S3 by extracting representative frames, generating multimodal embeddings with Amazon Bedrock Titan models, and storing them in a vector database for efficient retrieval. The solution optionally integrates OpenAI vision models to generate human-readable explanations of retrieved video segments.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Processes video files from Amazon S3 and extracts timestamped frames using OpenCV.</li>
+                    <li>Generates multimodal embeddings (text / image shared space) with Amazon Bedrock Titan.</li>
+                    <li>Stores frame embeddings in ChromaDB to support similarity search at scale.</li>
+                    <li>Enables text-based queries such as "find scenes with a beach" or "show moments with cars".</li>
+                    <li>Returns relevant video frames along with their corresponding timestamps.</li>
+                    <li>Optional OpenAI vision integration to summarize or explain retrieved frames.</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Balancing semantic coverage and cost through configurable frame sampling strategies.</li>
+                    <li>Designing stable frame identifiers to avoid redundant embeddings and control API usage.</li>
+                    <li>Handling corrupted frames or partial failures without interrupting ingestion.</li>
+                    <li>Structuring the pipeline to be notebook-friendly while remaining portable to production architectures.</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Demonstrated effective semantic search across video content without manual tagging.</li>
+                    <li>Enabled precise localization of relevant moments within videos using timestamps.</li>
+                    <li>Established a reusable multimodal pipeline that can be extended to audio analysis, scene detection, and long-form video understanding.</li>
+                    <li>Serves as a foundation for scalable video intelligence applications and advanced RAG systems.</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/s3-bedrock-video-rag" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
+            <div class="project-card fade-in">
+                <h3>Multimodal Image Retrieval (RAG) with AWS &amp; OpenAI</h3>
+                <p><strong>Overview:</strong> Built a state-of-the-art multimodal Retrieval-Augmented Generation (RAG) system that enables semantic image search from a large collection of photos stored in Amazon S3. The system uses Amazon Bedrock Titan multimodal embeddings to map images and text into a shared vector space, stores them in ChromaDB, and returns the most relevant images for a user's natural language query. Optionally, the system generates descriptive summaries of results using OpenAI Vision models.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Downloads and normalizes images (JPEG/PNG) from an S3 bucket.</li>
+                    <li>Generates robust multimodal embeddings (shared space for text &amp; images) using Amazon Bedrock Titan models.</li>
+                    <li>Stores vectors in a persistent vector database (ChromaDB) for scalable semantic search.</li>
+                    <li>Supports natural language queries such as "Find images with a blue car" or "Show cars on the beach".</li>
+                    <li>Optional integration with OpenAI Vision models to produce human-readable summaries referencing labeled image results.</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Handling a heterogeneous image dataset and preventing embedding model failures via normalization.</li>
+                    <li>Designing efficient batching and caching strategies to control API usage costs.</li>
+                    <li>Building a retrieval interface that gracefully handles ambiguous or partial queries.</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Demonstrated seamless semantic image search across thousands of images using simple natural language.</li>
+                    <li>Reduced false matches and improved relevance through multimodal embeddings.</li>
+                    <li>Enabled interpretable outputs by combining retrieval with generative vision summaries.</li>
+                    <li>Provides a foundation for extending the same pipeline to video RAG and multimodal search apps.</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/s3-bedrock-text-rag" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
-        <div class="project-card2">
-            <h3>🖼️ Multimodal Image Retrieval (RAG) with AWS & OpenAI</h3>
-            <p><strong>Overview:</strong> Built a state-of-the-art multimodal Retrieval-Augmented Generation (RAG) system that enables semantic image search from a large collection of photos stored in Amazon S3. The system uses Amazon Bedrock Titan multimodal embeddings to map images and text into a shared vector space, stores them in ChromaDB, and returns the most relevant images for a user’s natural language query. Optionally, the system generates descriptive summaries of results using OpenAI Vision models.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Downloads and normalizes images (JPEG/PNG) from an S3 bucket.</li>
-                <li>Generates robust multimodal embeddings (shared space for text & images) using Amazon Bedrock Titan models.</li>
-                <li>Stores vectors in a persistent vector database (ChromaDB) for scalable semantic search.</li>
-                <li>Supports natural language queries such as “Find images with a blue car” or “Show cars on the beach”.</li>
-                <li>Optional integration with OpenAI Vision models to produce human-readable summaries referencing labeled image results.</li>
-            </ul>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Handling a heterogeneous image dataset and preventing embedding model failures via normalization.</li>
-                <li>Designing efficient batching and caching strategies to control API usage costs.</li>
-		<li>Building a retrieval interface that gracefully handles ambiguous or partial queries.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Demonstrated seamless semantic image search across thousands of images using simple natural language.</li>
-                <li>Reduced false matches and improved relevance through multimodal embeddings.</li>
-                <li>Enabled interpretable outputs by combining retrieval with generative vision summaries.</li>
-                <li>Provides a foundation for extending the same pipeline to video RAG and multimodal search apps.</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/s3-bedrock-text-rag" target="_blank">View Project on GitHub</a></p>
-        </div>
+            <div class="project-card fade-in">
+                <h3>RAG Implementation with Python and Anthropic</h3>
+                <p><strong>Overview:</strong> Implemented a Retrieval-Augmented Generation (RAG) system using Python, integrating Anthropic's Claude API for language model capabilities along with various other technologies for document processing and vector search.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Document processing and text extraction from PDFs.</li>
+                    <li>Text chunking for optimal context handling.</li>
+                    <li>Vector storage and semantic search using ChromaDB.</li>
+                    <li>Integration with Anthropic's Claude API for enhanced responses.</li>
+                    <li>Support for metadata and URL preservation.</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Processed PDF files and created text chunks.</li>
+                    <li>Stored vectors in ChromaDB and identified similar chunks for user queries.</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Leveraged specialized data sources to provide context to the LLM, reducing hallucination risks.</li>
+                    <li>Provided structured responses using Anthropic's NLP capabilities.</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/RAG_Project" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
+            <div class="project-card fade-in">
+                <h3>AI Agent Car Compare Solution</h3>
+                <p><strong>Overview:</strong> Developed an AI-powered chatbot solution that provides intelligent car comparisons. This solution leverages ChromaDB for data storage, Anthropic's Claude LLM for natural language processing, and a sophisticated comparison engine to offer users insights based on specific car specifications.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Multi-car comparison across various specifications</li>
+                    <li>Natural language understanding for user queries</li>
+                    <li>Detailed comparisons of technical specifications, safety ratings, comfort, and tech features</li>
+                    <li>AI-powered intelligent analysis and recommendations</li>
+                    <li>Real-time and flexible querying capabilities</li>
+                    <li>Comprehensive data processing for structured responses</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Processing large amounts of car specification data from PDFs</li>
+                    <li>Creating text chunks and vectorizing them for semantic search</li>
+                    <li>Identifying relevant chunks for user queries and integrating with Claude LLM for human-like responses</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Enabled users to receive precise answers based on specific car knowledge domains</li>
+                    <li>Reduced response time for car comparison insights, improving user experience</li>
+                    <li>Reduced the risk of hallucinations by using domain-specific data for context</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/AI_Agents_CarCompare" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
-        <div class="project-card2">
-            <h3>🛠 RAG Implementation with Python and Anthropic</h3>
-            <p><strong>Overview:</strong> Implemented a Retrieval-Augmented Generation (RAG) system using Python, integrating Anthropic's Claude API for language model capabilities along with various other technologies for document processing and vector search.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Document processing and text extraction from PDFs.</li>
-                <li>Text chunking for optimal context handling.</li>
-                <li>Vector storage and semantic search using ChromaDB.</li>
-                <li>Integration with Anthropic's Claude API for enhanced responses.</li>
-                <li>Support for metadata and URL preservation.</li>
-            </ul>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Processed PDF files and created text chunks.</li>
-                <li>Stored vectors in ChromaDB and identified similar chunks for user queries.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Leveraged specialized data sources to provide context to the LLM, reducing hallucination risks.</li>
-                <li>Provided structured responses using Anthropic's NLP capabilities.</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/RAG_Project" target="_blank">View Project on GitHub</a></p>
-        </div>
+            <div class="project-card fade-in">
+                <h3>URL Similarity Search System using ChromaDB</h3>
+                <p><strong>Overview:</strong> This project implements a smart URL matching system that helps users find the correct webpage even when they encounter typos or slightly incorrect URLs. By converting URLs into numerical vectors and using ChromaDB for similarity search, the system identifies and suggests the most similar valid URLs from a website's sitemap.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Processes XML sitemaps to extract URLs</li>
+                    <li>Converts URLs into vector representations</li>
+                    <li>Stores these vectors in ChromaDB for efficient similarity search</li>
+                    <li>Finds similar URLs when given a potentially incorrect URL</li>
+                    <li>Redirects users to the closest matching content</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Ensuring accuracy when processing large amounts of URL data</li>
+                    <li>Developing vectorization techniques for URL comparison</li>
+                    <li>Handling multiple URL structures, formats, and patterns</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Improved user experience by guiding users to the correct content instead of showing generic 404 errors</li>
+                    <li>Reduced user frustration and maintained engagement on the site</li>
+                    <li>Enabled support for content migration, legacy URL structures, and preserved SEO value</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/URL_similarity" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
-        <div class="project-card2">
-            <h3>🛠 AI Agent Car Compare Solution</h3>
-            <p><strong>Overview:</strong> Developed an AI-powered chatbot solution that provides intelligent car comparisons. This solution leverages ChromaDB for data storage, Anthropic's Claude LLM for natural language processing, and a sophisticated comparison engine to offer users insights based on specific car specifications.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>🚗 Multi-car comparison across various specifications</li>
-                <li>🤖 Natural language understanding for user queries</li>
-                <li>📊 Detailed comparisons of technical specifications, safety ratings, comfort, and tech features</li>
-                <li>🧠 AI-powered intelligent analysis and recommendations</li>
-                <li>🔍 Real-time and flexible querying capabilities</li>
-                <li>📈 Comprehensive data processing for structured responses</li>
-            </ul>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Processing large amounts of car specification data from PDFs</li>
-                <li>Creating text chunks and vectorizing them for semantic search</li>
-                <li>Identifying relevant chunks for user queries and integrating with Claude LLM for human-like responses</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Enabled users to receive precise answers based on specific car knowledge domains</li>
-                <li>Reduced response time for car comparison insights, improving user experience</li>
-                <li>Reduced the risk of hallucinations by using domain-specific data for context</li>
-            </ul>
-            <p><strong>Benefits:</strong></p>
-            <ul>
-                <li>Provides a structured, human-like interaction experience for end users</li>
-                <li>Leverages AI to assist with decision-making based on real-world car data</li>
-                <li>Supports the discovery of the best car based on personalized needs and preferences</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/AI_Agents_CarCompare" target="_blank">View Project on GitHub</a></p>
-        </div>        
+            <div class="project-card fade-in">
+                <h3>Amplitude Analytics Documentation RAG System</h3>
+                <p><strong>Overview:</strong> This project implements a Retrieval-Augmented Generation (RAG) system for Amplitude Analytics documentation. It combines vector similarity search with Claude AI to provide intelligent, context-aware guidance for implementing analytics tracking and analysis in Amplitude.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Markdown documentation parsing</li>
+                    <li>Semantic search for relevant events and attributes</li>
+                    <li>AI-powered implementation guidance</li>
+                    <li>Attribute-aware analytics recommendations</li>
+                    <li>Interactive query processing</li>
+                    <li>Real-time similarity scoring</li>
+                </ul>
+                <p><strong>Challenges &amp; Complexity:</strong></p>
+                <ul>
+                    <li>Integrating multiple data sources and vectorizing documentation content</li>
+                    <li>Ensuring high accuracy in semantic search for specific analytics guidance</li>
+                    <li>Developing a robust interactive query processing system</li>
+                </ul>
+                <p><strong>Impact &amp; Achievements:</strong></p>
+                <ul>
+                    <li>Improved efficiency of analytics implementation by providing precise, context-aware guidance</li>
+                    <li>Reduced time spent on searching documentation by offering real-time, relevant answers</li>
+                    <li>Enhanced onboarding experience for new analytics team members by providing structured assistance</li>
+                </ul>
+                <p><a href="https://github.com/gtapia75/RAG_analytics_helper" target="_blank" class="btn btn-outline">View on GitHub</a></p>
+            </div>
 
-        <div class="project-card2">
-            <h3>🔗 URL Similarity Search System using ChromaDB</h3>
-            <p><strong>Overview:</strong> This project implements a smart URL matching system that helps users find the correct webpage even when they encounter typos or slightly incorrect URLs. By converting URLs into numerical vectors and using ChromaDB for similarity search, the system identifies and suggests the most similar valid URLs from a website's sitemap. This approach is particularly useful for large websites where manually redirecting or finding correct URLs would be time-consuming.</p>
+            <div class="project-card fade-in">
+                <h3>Additional Projects &amp; Resources</h3>
+                <p><strong>Overview:</strong> Additional projects and creative AI applications available on my GitHub repository.</p>
+                <ul>
+                    <li>Interview prompts for mock interviews with ChatGPT &mdash; <a href="interviewprompts.html">See prompts</a></li>
+                    <li>How to create a Toy Figure using AI &mdash; <a href="collectibleToyFigure.html">See prompts</a></li>
+                    <li>Supervised Machine Learning Projects &mdash; <a href="https://github.com/gtapia75/Supervised-Machine-Learning" target="_blank">View on GitHub</a></li>
+                    <li>Data Visualization Projects &mdash; <a href="https://github.com/gtapia75/data-visualization" target="_blank">View on GitHub</a></li>
+                    <li>Data Analysis Projects &mdash; <a href="https://github.com/gtapia75/data-analysis" target="_blank">View on GitHub</a></li>
+                    <li>Product Recommendation Project &mdash; <a href="https://github.com/gtapia75/amazon-product-recommender" target="_blank">View on GitHub</a></li>
+                    <li>Snowflake Data Quality Projects &mdash; <a href="https://github.com/gtapia75/data-quality-pipeline" target="_blank">View on GitHub</a></li>
+                </ul>
+            </div>
 
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Processes XML sitemaps to extract URLs</li>
-                <li>Converts URLs into vector representations</li>
-                <li>Stores these vectors in ChromaDB for efficient similarity search</li>
-                <li>Finds similar URLs when given a potentially incorrect URL</li>
-                <li>Redirects users to the closest matching content</li>
-            </ul>
-
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Ensuring accuracy when processing large amounts of URL data</li>
-                <li>Developing vectorization techniques for URL comparison</li>
-                <li>Handling multiple URL structures, formats, and patterns</li>
-            </ul>
-
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Improved user experience by guiding users to the correct content instead of showing generic 404 errors</li>
-                <li>Reduced user frustration and maintained engagement on the site</li>
-                <li>Enabled support for content migration, legacy URL structures, and preserved SEO value</li>
-            </ul>
-
-            <p><strong>Benefits:</strong></p>
-            <ul>
-                <li>Enhances user experience and error recovery</li>
-                <li>Facilitates content migration and legacy support</li>
-                <li>Improves analytics and content management by identifying URL patterns</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/URL_similarity" target="_blank">View Project on GitHub</a></p>
-        </div>        
-
-        <div class="project-card2">
-            <h3>📚 Amplitude Analytics Documentation RAG System</h3>
-            <p><strong>Overview:</strong> This project implements a Retrieval-Augmented Generation (RAG) system for Amplitude Analytics documentation. It combines vector similarity search with Claude AI to provide intelligent, context-aware guidance for implementing analytics tracking and analysis in Amplitude.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>📝 Markdown documentation parsing</li>
-                <li>🔍 Semantic search for relevant events and attributes</li>
-                <li>🤖 AI-powered implementation guidance</li>
-                <li>📊 Attribute-aware analytics recommendations</li>
-                <li>🔄 Interactive query processing</li>
-                <li>📈 Real-time similarity scoring</li>
-            </ul>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Integrating multiple data sources and vectorizing documentation content</li>
-                <li>Ensuring high accuracy in semantic search for specific analytics guidance</li>
-                <li>Developing a robust interactive query processing system</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Improved efficiency of analytics implementation by providing precise, context-aware guidance</li>
-                <li>Reduced time spent on searching documentation by offering real-time, relevant answers</li>
-                <li>Enhanced onboarding experience for new analytics team members by providing structured assistance</li>
-            </ul>
-            <p><strong>Benefits:</strong></p>
-            <ul>
-                <li>Improves analytics accuracy by offering tailored guidance</li>
-                <li>Reduces time spent searching for documentation, boosting productivity</li>
-                <li>Supports data-driven decision-making by making analytics insights more accessible</li>
-            </ul>
-            <p><a href="https://github.com/gtapia75/RAG_analytics_helper" target="_blank">View Project on GitHub</a></p>
-        </div>        
-
-        <div class="project-card2">
-            <h3>🛠 Additional Solutions</h3>
-            <p><strong>Overview:</strong>Additional projects more generic that you can review on my GitHub repository.</p>
-            <ul>
-                <li>Interview prompts for mock interviews with ChatGPT <a href="https://gtapia75.github.io/interviewprompts.html">See prompts</a> </li>
-                <li>How to create a Toy Figure using AI - <a href="https://gtapia75.github.io/collectibleToyFigure.html">See prompts</a></li>
-                <li>Supervised Machine Learning Projects <a href="https://github.com/gtapia75/Supervised-Machine-Learning" target="_blank">View Project on GitHub</a></li>
-                <li>Data Visualization Projects <a href="https://github.com/gtapia75/data-visualization" target="_blank">View Project on GitHub</a></li>
-                <li>Data Analysis Projects <a href="https://github.com/gtapia75/data-analysis" target="_blank">View Project on GitHub</a></li>
-                <li>Product Recommendation Project <a href="https://github.com/gtapia75/amazon-product-recommender" target="_blank">View Project on GitHub</a></li>
-                <li>Snowflake Data Quality Projects <a href="https://github.com/gtapia75/data-quality-pipeline" target="_blank">View Project on GitHub</a></li>
-           </ul>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#certifications">Certifications</a>
+                <a href="index.html#ai-ml">AI/ML</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    (function(){
+        var toggle = document.getElementById('navToggle');
+        var links = document.getElementById('navLinks');
+        if(toggle && links){
+            toggle.addEventListener('click', function(){ links.classList.toggle('open'); });
+            links.addEventListener('click', function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
+        }
+        var observer = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, {threshold:0.1});
+        document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    })();
+    </script>
+
 </body>
 </html>

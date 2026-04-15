@@ -3,279 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerardo Tapia - Personal Homepage</title>
+    <title>Gerardo Tapia Cruz - Senior Technical Program Manager</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.amplitude.com/script/9fde69174862e95197b03905ce13779e.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('9fde69174862e95197b03905ce13779e', {"fetchRemoteConfig":true,"autocapture":true});</script>
 </head>
 <body>
-    <header>
-        <img src="/images/github_profile.jpg" alt="Gerardo Tapia Cruz" class="profile-img">
-        <h1>Gerardo Tapia Cruz</h1>
-        <p> Technical Program Manager | Data Science | Agile | Data-Driven | Customer-Focused</p>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-brand">Gerardo Tapia Cruz</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#ai-ml">AI/ML</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="/images/github_profile.jpg" alt="Gerardo Tapia Cruz" class="profile-img">
+            <h1>Gerardo Tapia Cruz</h1>
+            <p class="tagline">Senior Technical Program Manager specializing in Data Strategy, Cloud Transformation, and AI-Enabled Platforms. Driving enterprise-scale impact across media, entertainment, and retail.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/gerardo-tapia-cruz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/gtapia75" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.kaggle.com/gtapia" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+                    </svg>
+                </a>
+                <a href="mailto:gertapia75@gmail.com" aria-label="Email">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <section class="social-links">
-        <center>
-            <a href="https://linkedin.com/in/gerardo-tapia-cruz" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0077B5">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                <span></span>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/gtapia75" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#333">
-                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                </svg>
-                <span></span>
-            </a>
-
-            <!-- Kaggle -->
-            <a href="https://www.kaggle.com/gtapia" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#20BEFF">
-                    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/></svg>
-                <span></span>
-            </a>            
-                    
-            <!-- Email -->
-            <a href="mailto:gertapia75@gmail.com">
-                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EA4335">
-                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
-                </svg>
-                <span></span>
-            </a>            
-        </center>
-    </section>
-
-    <section>
-        <h2>About Me</h2>
-        <div class="project-card2">
-                <p>    
-                I’m a Senior Technical Program Manager with a passion for data, cloud strategy, and digital transformation. I help companies build scalable platforms, optimize cloud infrastructure, and integrate AI-powered solutions to improve efficiency and decision-making.
-                With 15+ years of experience, I’ve led enterprise-wide data initiatives, cloud migrations, and Customer Data Platform (CDP) implementations. I enjoy working with engineering, product, and data teams to drive projects that make data more accessible, reliable, and actionable.
-                At MotorTrend - Warner Bros. Discovery and Sony Pictures, I managed large-scale data and AI programs, improving performance, cutting costs, and increasing speed to insights. I introduced the ‘Situation Rooms’ methodology, which increased team efficiency by 300% while improving collaboration and transparency.
-                </p>
-                <p>
-                What I Do Best:<br>
-                ✔ Data & Cloud Strategy – Helping businesses scale their data platforms and cloud infrastructure.<br>
-                ✔ AI-Enabled Platforms – Supporting AI-driven decision-making and automation.<br>
-                ✔ CDP & Experimentation – Improving customer insights and personalization with better data.<br>
-                ✔ Cross-Team Collaboration – Bridging the gap between engineering, product, and business teams.<br>
-                ✔ Servant Leadership – Building strong teams by empowering people and removing blockers.<br>
-                </p>
-                <p>
-                I believe data should drive action, not just reports, and that technology should simplify workflows, not complicate them. I’m always open to learning, sharing knowledge, and connecting with others who are working on data, AI, and cloud transformation projects.
-                </p>
-                <p>
-                Beyond my professional life, I'm a dedicated family man and an avid sports enthusiast. I hold a black belt in Karate-do, and my passion for athletics has led me to complete six marathons, including the Los Angeles Marathon in 2023. When I'm not working or running, you can find me enjoying time with my wife and two teenagers, tinkering with RC helicopters and cars, or solving puzzles. This balance of technical expertise, physical activity, and family time keeps me grounded and energized to take on new challenges.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Enterprise Projects</h2>
-
-        <div class="project-card2">
-            <h3>🚀 Enterprise Customer Data Platform (CDP) Transformation</h3>
-            <p><strong>Overview:</strong> Led a multi-year initiative to implement a <strong>Customer Data Platform (CDP)</strong> across MotorTrend's digital ecosystem, integrating analytics from <strong>eight different technology platforms</strong> including Web, Mobile We, Android, iOS, AppleTV, Roku, Connected TV's and Gamming consoles.</p>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Managed integration across <strong>multiple teams</strong> (Data Engineering, Product, QA).</li>
-                <li>Consolidated data from multiple platforms into a single source of truth to improve accessibility and reduce reliance on Adobe Analytics. Created unified customer profiles by linking separate data points.</li>
-                <li>Integrated downstream systems including <strong>data warehouse, Google Ad Manager (GAM), internal email services, and visualization tools like Amplitude</strong> to enable deeper data analysis.</li>
-                <li>Addressed implementation bottlenecks by reducing dependence on a limited number of engineers with deep Adobe Analytics expertise, allowing for faster deployment and scalability.</li>
-                <li>Oversaw <strong>1,500+ development tickets</strong> related to data integration, validation, and automation during the first 12 months.</li>
-            </ul>
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Introduced <strong>“Situation Rooms”</strong>, a collaborative problem-solving framework that <strong>doubled ticket resolution speed</strong> and improved cross-team communication.</li>
-                <li>Built <strong>real-time data validation pipelines</strong>, reducing data inconsistencies by <strong>75%</strong> and ensuring accuracy across platforms.</li>
-                <li>Developed <strong>automated dashboards</strong> that transformed reporting <strong>from days to minutes</strong>, providing instant access to key business metrics.</li>
-                <li>Enabled real-time tracking of <strong>Core Web Vitals, ad load times, and ad performance metrics</strong>, allowing teams to monitor <strong>ads requested, rendered, and viewed</strong>.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li><strong>$750K in cost savings </strong> through workflow optimization and reduced dependency on Adobe Analytics.</li>
-                <li><strong>Increased accessibility of analytics</strong> across the company, allowing teams in <strong>Sales, Ad Sales, Finance, Business Intelligence, Product Management, Program Management, QA, and Marketing</strong> to self-serve insights using Amplitude.</li>
-                <li>Created <strong>human-readable data attributes</strong>, eliminating the need for specialized data analysts to extract insights.</li>
-                <li>Enabled <strong>near real-time analytics</strong>, improving decision-making accuracy and speed across the organization.</li>
-            </ul>
-            This transformation unlocked <strong>company-wide data visibility</strong>, empowering all teams to make <strong>faster, data-driven decisions</strong> with <strong>morea ccesible and accurate analytics</strong>.
-        </div>
-
-        <div class="project-card2">
-            <h3>💡 Nitrous Heads-Up Display (HUD) for Real-Time Metrics</h3>
-            <p><strong>Overview:</strong> Spearheaded the design and implementation of an innovative Nitrous Heads-Up Display (HUD) system that provides real-time performance metrics for the editorial team.</p>
-            <p><strong>Use Case:</strong> The editorial team needed real-time visibility into website metrics to make immediate decisions on homepage content curation and marketing actions.</p>
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>The team previously waited up to 24 hours to receive traffic insights for articles.</li>
-                <li>Needed a real-time tool for immediate actions to boost traffic and impact.</li>
-            </ul>
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Leveraged the "Situation Room" methodology to deliver a working product in one week.</li>
-                <li>Created a new product using CDP data to display real-time metrics including concurrent users, quality clicks, recirculation percentage, time on page, links ranking, top articles, top referrers, click heatmap, and scroll heatmap.</li>
-            </ul>
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Reduced time-to-insight from days to minutes, enabling immediate editorial action.</li>
-                <li>Delivered <strong>$45K annual savings</strong> due to software licensing.</li>
-                <li>Enhanced the editorial team's ability to optimize homepage content in real-time, increasing traffic and supporting marketing efforts.</li>
-            </ul>
-        </div>        
-
-
-        <div class="project-card2">
-            <h3>📌 Data Engineering Team Transformation & Agile Implementation</h3>
-            <p><strong>Overview:</strong> Led a complete cultural and operational transformation of the Data Engineering team at MotorTrend by introducing Scrum methodology and data-driven practices.</p>
-            
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Inherited an unstructured team focused on reactive maintenance.</li>
-                <li>Lack of structured workflows, product backlogs, and prioritization.</li>
-            </ul>
-            
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Implemented structured product backlogs, intake process and stakeholder-driven prioritization.</li>
-                <li>Created custom analytics dashboards to track team performance.</li>
-            </ul>
-            
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Achieved a <strong>50% increase in story points</strong> delivered.</li>
-                <li>Improved ticket completion rates by <strong>37%</strong>.</li>
-                <li>Fostered a positive work environment, leading to greater ownership and collaboration.</li>
-            </ul>
-        </div>        
-
-        <div class="project-card2">
-            <h3>🎯 Crackle SVOD Platform Launch - Latin America</h3>
-            <p><strong>Overview:</strong> Led the expansion of Sony's Crackle streaming service across Latin America, successfully launching the platform in <strong>17 countries</strong> and managing technical integrations for <strong>65 different affiliates</strong>.</p>
-            
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Orchestrated multiple platform types, including <strong>OTT (Over-The-Top)</strong>, <strong>TVE (TV Everywhere)</strong>, and <strong>STB (Set-Top Box)</strong> solutions.</li>
-                <li>Coordinated with multiple teams across different countries.</li>
-            </ul>
-            
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Built and led a local <strong>QA team</strong> in Mexico, implementing Agile methodologies to improve efficiency.</li>
-                <li>Developed a <strong>centralized content delivery hub</strong> serving seven regions, reducing content delivery time by 40%.</li>
-            </ul>
-            
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Improved content certification speed by <strong>50%</strong> while maintaining <strong>99.9% accuracy</strong>.</li>
-                <li>Increased team velocity by <strong>35%</strong>.</li>
-                <li>Received the <strong>Sony Crackle Employee Award</strong> in 2017 for the project's impact.</li>
-            </ul>
-        </div>
-        
-        <div class="project-card2">
-            <h3>🏢 Enterprise Digital Transformation at Sears Mexico</h3>
-            <p><strong>Overview:</strong> As Head of IT Merchandise, led a major digital transformation initiative that revolutionized purchasing and inventory operations at Sears Mexico.</p>
-            
-            <p><strong>Challenges & Complexity:</strong></p>
-            <ul>
-                <li>Architected and deployed an enterprise purchasing platform serving <strong>500+ users</strong> and connecting with <strong>200+ vendors</strong> across <strong>100+ stores</strong>.</li>
-                <li>Integrated legacy infrastructure with modern platforms.</li>
-            </ul>
-            
-            <p><strong>Innovations & Solutions:</strong></p>
-            <ul>
-                <li>Enabled real-time inventory tracking and automated vendor management.</li>
-                <li>Modernized the entire supply chain technology stack.</li>
-            </ul>
-            
-            <p><strong>Impact & Achievements:</strong></p>
-            <ul>
-                <li>Achieved a <strong>40% reduction in processing time</strong> for purchasing operations.</li>
-                <li>Reduced transaction processing costs by <strong>45%</strong>.</li>
-                <li>Ensured zero disruption to daily retail operations while leading a team of <strong>5 specialized engineers</strong>.</li>
-            </ul>
-        </div>
-        
-        
-    </section>
-
-    <section>
-        <h2>Certifications</h2>
-        <div class="project-card2">
-            <p>This section showcases the certifications I’ve earned throughout my career. These certifications reflect my knowledge in areas like cloud computing, data science, machine learning, project management, and process improvement. They highlight my commitment to learning and staying up to date with industry best practices.</p>
-            <a href="certifications.html" class="btn">Explore My Certifications</a>
+    <!-- Executive Summary -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2>Executive Summary</h2>
             </div>
-    </section>
-
-    <section>
-        <h2>AI/ML Implementations</h2>
-        <div class="project-card2">
-            <p>I started my AI/ML journey with a "Data Science" program from UCLA, earning a certificate after completing the program. This experience introduced me to key concepts like data visualization, big data, and machine learning, where I implemented several projects.</p>
-            <p>Later, I pursued a second program called "Data Science and Machine Learning: Making Data-Driven Decisions" offered by MIT, MIT IDSS, and Great Learning. I earned another certificate and had the honor of speaking at the opening ceremony of a new cohort, where I shared my experiences. This program deepened my knowledge in machine learning, AI, RAG, generative AI, big data, deep learning, and recommendation systems.</p>
-            <p>Since then, I have been actively applying my learnings through AI/ML projects and proofs-of-concept (POCs) at my company, participating in Kaggle competitions, and exploring innovative ways to use technology to drive business improvements.</p>
-            <a href="ai-ml-projects.html" class="btn">Explore My AI/ML Projects</a>
+            <div class="executive-summary fade-in">
+                <p>Senior Technical Program Manager with 15+ years driving enterprise-scale data initiatives, cloud migrations, and digital transformation across media, entertainment, and retail. Proven track record of building scalable platforms, integrating AI-powered solutions, and leading cross-functional teams at MotorTrend &ndash; Warner Bros. Discovery and Sony Pictures. Creator of the "Situation Rooms" methodology that tripled team efficiency while improving collaboration and transparency.</p>
             </div>
-    </section>
-    
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <h3>Program Management & Leadership</h3>
-            <p>
-                <ul>
-                    <li>Enterprise Program/Project Management</li>
-                    <li>Cross-functional Team Leadership</li>
-                    <li>Agile & Scrum Methodologies (Certified SPOC)</li>
-                    <li>Change Management & Digital Transformation</li>
-                    <li>Stakeholder Management</li>
-                    <li>Risk Management & Mitigation</li>
-                    <li>Vendor Partnership Management</li>
-                    <li>Resource Planning & Team Building</li>
-                    <li>Servant Leadership Style</li>
-                </ul>
-            </p>
-            <h3>Technical Expertise</h3>
-            <p>
-                <ul>
-                    <li>Data Engineering & Architecture</li>
-                    <li>Customer Data Platforms (CDP)</li>
-                    <li>Business Intelligence & Analytics</li>
-                    <li>Data Science (UCLA Certified)</li>
-                    <li>Machine Learning (MIT Certified)</li>
-                    <li>Cloud Platforms (AWS Certified)</li>
-                    <li>ITIL Service Management</li>
-                    <li>System Integration</li>
-                    <li>Data Privacy & Security Compliance</li>
-                </ul>
-            </p>
-            <h3>Tools & Technologies</h3>
-            <p>
-                <ul>
-                    <li>Project Management: Jira, Confluence, MS Project, Smartsheet, Notion</li>
-                    <li>Data Platforms: Snowflake, mParticle, Amplitude</li>
-                    <li>Analytics & Visualization: Python, SQL, Data Quality Frameworks</li>
-                    <li>Cloud: AWS, Enterprise Systems Integration</li>
-                    <li>Business Process: Six Sigma Yellow Belt</li>
-                </ul>
-            </p>
-            <h3>Industry Knowledge</h3>
-            <p>
-                <ul>
-                    <li>Media & Entertainment</li>
-                    <li>Streaming Platforms (SVOD/OTT)</li>
-                    <li>ADigital Product Development</li>
-                    <li>Retail & E-commerce</li>
-                    <li>Enterprise Architecture</li>
-                    <li>Digital Transformation</li>
-                </ul>
-            </p>
-        </ul>
+            <div class="strengths fade-in">
+                <div class="strength-item">Data &amp; Cloud Strategy</div>
+                <div class="strength-item">AI-Enabled Platforms</div>
+                <div class="strength-item">CDP &amp; Experimentation</div>
+                <div class="strength-item">Cross-Team Collaboration</div>
+                <div class="strength-item">Servant Leadership</div>
+                <div class="strength-item">Digital Transformation</div>
+            </div>
+            <div class="metrics fade-in">
+                <div class="metric-card">
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Years of Experience</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$750K+</div>
+                    <div class="metric-label">Cost Savings Delivered</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">17</div>
+                    <div class="metric-label">Countries Launched</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">1,500+</div>
+                    <div class="metric-label">Tickets Managed</div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Enterprise Projects -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Track Record</span>
+                <h2>Enterprise Projects</h2>
+                <p>Key initiatives delivered across media, entertainment, and retail</p>
+            </div>
+            <div class="timeline">
+
+                <!-- Project 1 -->
+                <div class="timeline-item fade-in">
+                    <details class="timeline-card" open>
+                        <summary>
+                            <div>
+                                <div class="timeline-company">MotorTrend &ndash; Warner Bros. Discovery</div>
+                                Enterprise Customer Data Platform (CDP) Transformation
+                            </div>
+                        </summary>
+                        <div class="timeline-body">
+                            <p>Led a multi-year initiative to implement a <strong>Customer Data Platform (CDP)</strong> across MotorTrend's digital ecosystem, integrating analytics from <strong>eight different technology platforms</strong> including Web, Mobile Web, Android, iOS, AppleTV, Roku, Connected TVs and Gaming consoles.</p>
+                            <p><strong>Challenges &amp; Complexity:</strong></p>
+                            <ul>
+                                <li>Managed integration across <strong>multiple teams</strong> (Data Engineering, Product, QA).</li>
+                                <li>Consolidated data from multiple platforms into a single source of truth to improve accessibility and reduce reliance on Adobe Analytics. Created unified customer profiles by linking separate data points.</li>
+                                <li>Integrated downstream systems including <strong>data warehouse, Google Ad Manager (GAM), internal email services, and visualization tools like Amplitude</strong> to enable deeper data analysis.</li>
+                                <li>Addressed implementation bottlenecks by reducing dependence on a limited number of engineers with deep Adobe Analytics expertise, allowing for faster deployment and scalability.</li>
+                                <li>Oversaw <strong>1,500+ development tickets</strong> related to data integration, validation, and automation during the first 12 months.</li>
+                            </ul>
+                            <p><strong>Innovations &amp; Solutions:</strong></p>
+                            <ul>
+                                <li>Introduced <strong>"Situation Rooms"</strong>, a collaborative problem-solving framework that <strong>doubled ticket resolution speed</strong> and improved cross-team communication.</li>
+                                <li>Built <strong>real-time data validation pipelines</strong>, reducing data inconsistencies by <strong>75%</strong> and ensuring accuracy across platforms.</li>
+                                <li>Developed <strong>automated dashboards</strong> that transformed reporting <strong>from days to minutes</strong>, providing instant access to key business metrics.</li>
+                                <li>Enabled real-time tracking of <strong>Core Web Vitals, ad load times, and ad performance metrics</strong>, allowing teams to monitor <strong>ads requested, rendered, and viewed</strong>.</li>
+                            </ul>
+                            <p><strong>Impact &amp; Achievements:</strong></p>
+                            <ul>
+                                <li><strong>$750K in cost savings</strong> through workflow optimization and reduced dependency on Adobe Analytics.</li>
+                                <li><strong>Increased accessibility of analytics</strong> across the company, allowing teams in Sales, Ad Sales, Finance, Business Intelligence, Product Management, Program Management, QA, and Marketing to self-serve insights using Amplitude.</li>
+                                <li>Created <strong>human-readable data attributes</strong>, eliminating the need for specialized data analysts to extract insights.</li>
+                                <li>Enabled <strong>near real-time analytics</strong>, improving decision-making accuracy and speed across the organization.</li>
+                            </ul>
+                            <p>This transformation unlocked <strong>company-wide data visibility</strong>, empowering all teams to make <strong>faster, data-driven decisions</strong> with <strong>more accessible and accurate analytics</strong>.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="timeline-item fade-in">
+                    <details class="timeline-card">
+                        <summary>
+                            <div>
+                                <div class="timeline-company">MotorTrend &ndash; Warner Bros. Discovery</div>
+                                Nitrous Heads-Up Display (HUD) for Real-Time Metrics
+                            </div>
+                        </summary>
+                        <div class="timeline-body">
+                            <p>Spearheaded the design and implementation of an innovative Nitrous Heads-Up Display (HUD) system that provides real-time performance metrics for the editorial team.</p>
+                            <p><strong>Use Case:</strong> The editorial team needed real-time visibility into website metrics to make immediate decisions on homepage content curation and marketing actions.</p>
+                            <p><strong>Challenges &amp; Complexity:</strong></p>
+                            <ul>
+                                <li>The team previously waited up to 24 hours to receive traffic insights for articles.</li>
+                                <li>Needed a real-time tool for immediate actions to boost traffic and impact.</li>
+                            </ul>
+                            <p><strong>Innovations &amp; Solutions:</strong></p>
+                            <ul>
+                                <li>Leveraged the "Situation Room" methodology to deliver a working product in one week.</li>
+                                <li>Created a new product using CDP data to display real-time metrics including concurrent users, quality clicks, recirculation percentage, time on page, links ranking, top articles, top referrers, click heatmap, and scroll heatmap.</li>
+                            </ul>
+                            <p><strong>Impact &amp; Achievements:</strong></p>
+                            <ul>
+                                <li>Reduced time-to-insight from days to minutes, enabling immediate editorial action.</li>
+                                <li>Delivered <strong>$45K annual savings</strong> due to software licensing.</li>
+                                <li>Enhanced the editorial team's ability to optimize homepage content in real-time, increasing traffic and supporting marketing efforts.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="timeline-item fade-in">
+                    <details class="timeline-card">
+                        <summary>
+                            <div>
+                                <div class="timeline-company">MotorTrend &ndash; Warner Bros. Discovery</div>
+                                Data Engineering Team Transformation &amp; Agile Implementation
+                            </div>
+                        </summary>
+                        <div class="timeline-body">
+                            <p>Led a complete cultural and operational transformation of the Data Engineering team at MotorTrend by introducing Scrum methodology and data-driven practices.</p>
+                            <p><strong>Challenges &amp; Complexity:</strong></p>
+                            <ul>
+                                <li>Inherited an unstructured team focused on reactive maintenance.</li>
+                                <li>Lack of structured workflows, product backlogs, and prioritization.</li>
+                            </ul>
+                            <p><strong>Innovations &amp; Solutions:</strong></p>
+                            <ul>
+                                <li>Implemented structured product backlogs, intake process and stakeholder-driven prioritization.</li>
+                                <li>Created custom analytics dashboards to track team performance.</li>
+                            </ul>
+                            <p><strong>Impact &amp; Achievements:</strong></p>
+                            <ul>
+                                <li>Achieved a <strong>50% increase in story points</strong> delivered.</li>
+                                <li>Improved ticket completion rates by <strong>37%</strong>.</li>
+                                <li>Fostered a positive work environment, leading to greater ownership and collaboration.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="timeline-item fade-in">
+                    <details class="timeline-card">
+                        <summary>
+                            <div>
+                                <div class="timeline-company">Sony Pictures</div>
+                                Crackle SVOD Platform Launch &ndash; Latin America
+                            </div>
+                        </summary>
+                        <div class="timeline-body">
+                            <p>Led the expansion of Sony's Crackle streaming service across Latin America, successfully launching the platform in <strong>17 countries</strong> and managing technical integrations for <strong>65 different affiliates</strong>.</p>
+                            <p><strong>Challenges &amp; Complexity:</strong></p>
+                            <ul>
+                                <li>Orchestrated multiple platform types, including <strong>OTT (Over-The-Top)</strong>, <strong>TVE (TV Everywhere)</strong>, and <strong>STB (Set-Top Box)</strong> solutions.</li>
+                                <li>Coordinated with multiple teams across different countries.</li>
+                            </ul>
+                            <p><strong>Innovations &amp; Solutions:</strong></p>
+                            <ul>
+                                <li>Built and led a local <strong>QA team</strong> in Mexico, implementing Agile methodologies to improve efficiency.</li>
+                                <li>Developed a <strong>centralized content delivery hub</strong> serving seven regions, reducing content delivery time by 40%.</li>
+                            </ul>
+                            <p><strong>Impact &amp; Achievements:</strong></p>
+                            <ul>
+                                <li>Improved content certification speed by <strong>50%</strong> while maintaining <strong>99.9% accuracy</strong>.</li>
+                                <li>Increased team velocity by <strong>35%</strong>.</li>
+                                <li>Received the <strong>Sony Crackle Employee Award</strong> in 2017 for the project's impact.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="timeline-item fade-in">
+                    <details class="timeline-card">
+                        <summary>
+                            <div>
+                                <div class="timeline-company">Sears Mexico</div>
+                                Enterprise Digital Transformation
+                            </div>
+                        </summary>
+                        <div class="timeline-body">
+                            <p>As Head of IT Merchandise, led a major digital transformation initiative that revolutionized purchasing and inventory operations at Sears Mexico.</p>
+                            <p><strong>Challenges &amp; Complexity:</strong></p>
+                            <ul>
+                                <li>Architected and deployed an enterprise purchasing platform serving <strong>500+ users</strong> and connecting with <strong>200+ vendors</strong> across <strong>100+ stores</strong>.</li>
+                                <li>Integrated legacy infrastructure with modern platforms.</li>
+                            </ul>
+                            <p><strong>Innovations &amp; Solutions:</strong></p>
+                            <ul>
+                                <li>Enabled real-time inventory tracking and automated vendor management.</li>
+                                <li>Modernized the entire supply chain technology stack.</li>
+                            </ul>
+                            <p><strong>Impact &amp; Achievements:</strong></p>
+                            <ul>
+                                <li>Achieved a <strong>40% reduction in processing time</strong> for purchasing operations.</li>
+                                <li>Reduced transaction processing costs by <strong>45%</strong>.</li>
+                                <li>Ensured zero disruption to daily retail operations while leading a team of <strong>5 specialized engineers</strong>.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2>Skills &amp; Competencies</h2>
+            </div>
+            <div class="skills-grid fade-in">
+                <div class="skill-category">
+                    <h3>Program Management &amp; Leadership</h3>
+                    <ul class="skill-pills">
+                        <li>Enterprise Program Management</li>
+                        <li>Cross-functional Leadership</li>
+                        <li>Agile &amp; Scrum (SPOC)</li>
+                        <li>Change Management</li>
+                        <li>Stakeholder Management</li>
+                        <li>Risk Mitigation</li>
+                        <li>Vendor Management</li>
+                        <li>Resource Planning</li>
+                        <li>Servant Leadership</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Expertise</h3>
+                    <ul class="skill-pills">
+                        <li>Data Engineering</li>
+                        <li>Data Architecture</li>
+                        <li>CDP Platforms</li>
+                        <li>Business Intelligence</li>
+                        <li>Data Science (UCLA)</li>
+                        <li>Machine Learning (MIT)</li>
+                        <li>AWS Cloud (Certified)</li>
+                        <li>ITIL Service Management</li>
+                        <li>System Integration</li>
+                        <li>Data Privacy &amp; Compliance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools &amp; Technologies</h3>
+                    <ul class="skill-pills">
+                        <li>Jira</li>
+                        <li>Confluence</li>
+                        <li>MS Project</li>
+                        <li>Smartsheet</li>
+                        <li>Notion</li>
+                        <li>Snowflake</li>
+                        <li>mParticle</li>
+                        <li>Amplitude</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>AWS</li>
+                        <li>Six Sigma</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Industry Knowledge</h3>
+                    <ul class="skill-pills">
+                        <li>Media &amp; Entertainment</li>
+                        <li>Streaming (SVOD/OTT)</li>
+                        <li>Digital Products</li>
+                        <li>Retail &amp; E-commerce</li>
+                        <li>Enterprise Architecture</li>
+                        <li>Digital Transformation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Credentials</span>
+                <h2>Certifications &amp; Education</h2>
+                <p>Continuous learning across cloud, data science, machine learning, and process improvement</p>
+            </div>
+            <div class="cards-grid fade-in">
+                <div class="card">
+                    <h3>MIT &ndash; Data Science &amp; Machine Learning</h3>
+                    <p>Data Science and Machine Learning: Making Data-Driven Decisions. Offered by MIT, MIT IDSS, and Great Learning. Invited speaker at new cohort opening ceremony.</p>
+                </div>
+                <div class="card">
+                    <h3>UCLA &ndash; Data Science Certificate</h3>
+                    <p>Comprehensive program covering data visualization, big data, and machine learning with hands-on project implementations.</p>
+                </div>
+                <div class="card">
+                    <h3>AWS Cloud Practitioner</h3>
+                    <p>Foundational understanding of AWS Cloud services, architecture, security, and pricing models.</p>
+                </div>
+                <div class="card">
+                    <h3>Scrum Product Owner (SPOC)</h3>
+                    <p>Certified Scrum Product Owner by SCRUMStudy, with practical experience leading Agile teams.</p>
+                </div>
+                <div class="card">
+                    <h3>Six Sigma Yellow Belt</h3>
+                    <p>Process improvement methodology certification by SixSigmaStudy.</p>
+                </div>
+                <div class="card">
+                    <h3>ITIL Foundation</h3>
+                    <p>IT Service Management certification by PeopleCERT for enterprise service delivery frameworks.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="certifications.html" class="btn btn-outline">View All Certifications &amp; Badges</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/ML -->
+    <section id="ai-ml">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Innovation</span>
+                <h2>AI &amp; Machine Learning Projects</h2>
+                <p>Applying data science and generative AI to solve real-world business challenges</p>
+            </div>
+            <div class="card fade-in" style="max-width:800px; margin:0 auto;">
+                <p>Building on formal training from <strong>UCLA</strong> and <strong>MIT</strong>, I actively develop AI/ML proofs-of-concept including Retrieval-Augmented Generation (RAG) systems, multimodal search pipelines, and AI agents. These projects bridge the gap between academic knowledge and practical enterprise applications.</p>
+                <p>Areas of focus include video and image RAG with AWS Bedrock, LLM integrations with Anthropic Claude, semantic search systems, and analytics automation.</p>
+                <div style="margin-top:1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+                    <a href="ai-ml-projects.html" class="btn btn-primary">Explore AI/ML Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Note -->
+    <section>
+        <div class="container">
+            <div class="personal-note fade-in">
+                <p>Beyond my professional life, I'm a dedicated family man and an avid sports enthusiast. I hold a black belt in Karate-do, and my passion for athletics has led me to complete six marathons, including the Los Angeles Marathon in 2023. When I'm not working or running, you can find me enjoying time with my wife and two teenagers, tinkering with RC helicopters and cars, or solving puzzles. This balance of technical expertise, physical activity, and family time keeps me grounded and energized to take on new challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/gerardo-tapia-cruz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/gtapia75" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.kaggle.com/gtapia" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/></svg>
+                </a>
+                <a href="mailto:gertapia75@gmail.com" aria-label="Email">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                </a>
+            </div>
+            <nav class="footer-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="ai-ml-projects.html">AI/ML</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Gerardo Tapia Cruz. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+    (function(){
+        var toggle = document.getElementById('navToggle');
+        var links = document.getElementById('navLinks');
+        if(toggle && links){
+            toggle.addEventListener('click', function(){ links.classList.toggle('open'); });
+            links.addEventListener('click', function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
+        }
+        var nav = document.querySelector('.navbar');
+        if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }); }
+        var observer = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, {threshold:0.1});
+        document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    })();
+    </script>
+
 </body>
 </html>
