@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI/ML Projects - Gerardo Tapia</title>
+    <title>AI &amp; Data Initiatives - Gerardo Tapia Cruz</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.amplitude.com/script/9fde69174862e95197b03905ce13779e.js"></script>
     <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('9fde69174862e95197b03905ce13779e', {"fetchRemoteConfig":true,"autocapture":true});</script>
@@ -16,10 +16,12 @@
             <a href="index.html" class="nav-brand">Gerardo Tapia Cruz</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#certifications">Certifications</a></li>
-                <li><a href="index.html#ai-ml">AI/ML</a></li>
+                <li><a href="index.html#impact">Impact</a></li>
+                <li><a href="index.html#projects">Programs</a></li>
+                <li><a href="index.html#skills">Leadership Capabilities</a></li>
+                <li><a href="index.html#certifications">Credentials</a></li>
+                <li><a href="index.html#ai-ml">AI &amp; Data</a></li>
+                <li><a href="mailto:gertapia75@gmail.com">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -30,118 +32,142 @@
     <!-- Header -->
     <header class="subpage-header">
         <button onclick="window.location.href='index.html'" class="btn-back">&larr; Back to Home</button>
-        <h1>AI &amp; Machine Learning Projects</h1>
-        <p>Proofs-of-concept and implementations bridging data science with enterprise applications</p>
+        <h1>AI &amp; Data Initiatives</h1>
+        <p>Practical experiments in RAG, multimodal search, analytics automation, and enterprise operational intelligence.</p>
     </header>
+
+    <section class="learning-intro">
+        <div class="container">
+            <div class="card fade-in" style="max-width:900px; margin:0 auto;">
+                <p>These initiatives reflect my hands-on exploration of AI systems that can improve enterprise visibility, search, decision support, analytics workflows, and operational intelligence.</p>
+                <p>The focus is not experimentation for its own sake — it is understanding how AI, trusted data foundations, retrieval systems, and human-centered interfaces can solve real business and operational problems.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects -->
     <section>
         <div class="container">
 
+            <div class="section-header">
+                <span class="section-label">Applied AI Portfolio</span>
+                <h2>Selected AI &amp; Data Systems</h2>
+                <p>Hands-on implementations exploring retrieval, multimodal intelligence, analytics assistance, and enterprise search.</p>
+            </div>
+
             <div class="project-card fade-in">
                 <h3>Video Retrieval-Augmented Generation (Video RAG) with AWS &amp; OpenAI</h3>
-                <p><strong>Overview:</strong> Designed and implemented a multimodal Video RAG proof-of-concept that enables semantic search over video content using natural language queries. The system processes short videos stored in Amazon S3 by extracting representative frames, generating multimodal embeddings with Amazon Bedrock Titan models, and storing them in a vector database for efficient retrieval. The solution optionally integrates OpenAI vision models to generate human-readable explanations of retrieved video segments.</p>
-                <p><strong>Features:</strong></p>
+                <p><strong>Strategic Purpose:</strong> Explored how multimodal AI and retrieval systems can help organizations search, understand, and reason over video assets without relying entirely on manual tagging or metadata.</p>
+
+                <p><strong>System Design:</strong></p>
                 <ul>
-                    <li>Processes video files from Amazon S3 and extracts timestamped frames using OpenCV.</li>
-                    <li>Generates multimodal embeddings (text / image shared space) with Amazon Bedrock Titan.</li>
-                    <li>Stores frame embeddings in ChromaDB to support similarity search at scale.</li>
-                    <li>Enables text-based queries such as "find scenes with a beach" or "show moments with cars".</li>
-                    <li>Returns relevant video frames along with their corresponding timestamps.</li>
-                    <li>Optional OpenAI vision integration to summarize or explain retrieved frames.</li>
+                    <li>Processed video files from Amazon S3 and extracted representative timestamped frames using OpenCV.</li>
+                    <li>Generated multimodal embeddings with Amazon Bedrock Titan to map visual content and natural language queries into a shared semantic space.</li>
+                    <li>Stored embeddings in ChromaDB to support vector similarity search and timestamp-based retrieval.</li>
+                    <li>Integrated optional OpenAI vision capabilities to explain retrieved frames and provide human-readable context.</li>
                 </ul>
-                <p><strong>Challenges &amp; Complexity:</strong></p>
+
+                <p><strong>Enterprise Relevance:</strong></p>
                 <ul>
-                    <li>Balancing semantic coverage and cost through configurable frame sampling strategies.</li>
-                    <li>Designing stable frame identifiers to avoid redundant embeddings and control API usage.</li>
-                    <li>Handling corrupted frames or partial failures without interrupting ingestion.</li>
-                    <li>Structuring the pipeline to be notebook-friendly while remaining portable to production architectures.</li>
+                    <li>Demonstrates how AI can improve discovery across large media libraries, content archives, production assets, and operational video workflows.</li>
+                    <li>Supports use cases such as scene search, compliance review, content classification, media operations, and video intelligence.</li>
+                    <li>Reduces dependency on manual tagging by enabling natural language search across visual assets.</li>
                 </ul>
-                <p><strong>Impact &amp; Achievements:</strong></p>
+
+                <p><strong>What This Proves:</strong></p>
                 <ul>
-                    <li>Demonstrated effective semantic search across video content without manual tagging.</li>
-                    <li>Enabled precise localization of relevant moments within videos using timestamps.</li>
-                    <li>Established a reusable multimodal pipeline that can be extended to audio analysis, scene detection, and long-form video understanding.</li>
-                    <li>Serves as a foundation for scalable video intelligence applications and advanced RAG systems.</li>
+                    <li>Multimodal retrieval can make unstructured video content searchable and operationally useful.</li>
+                    <li>Frame-level indexing creates a practical bridge between video assets and AI-assisted discovery systems.</li>
+                    <li>The architecture can be extended toward long-form video understanding, audio analysis, metadata enrichment, and enterprise media intelligence.</li>
                 </ul>
+
                 <p><a href="https://github.com/gtapia75/s3-bedrock-video-rag" target="_blank" class="btn btn-outline">View on GitHub</a></p>
             </div>
 
             <div class="project-card fade-in">
                 <h3>Multimodal Image Retrieval (RAG) with AWS &amp; OpenAI</h3>
-                <p><strong>Overview:</strong> Built a state-of-the-art multimodal Retrieval-Augmented Generation (RAG) system that enables semantic image search from a large collection of photos stored in Amazon S3. The system uses Amazon Bedrock Titan multimodal embeddings to map images and text into a shared vector space, stores them in ChromaDB, and returns the most relevant images for a user's natural language query. Optionally, the system generates descriptive summaries of results using OpenAI Vision models.</p>
-                <p><strong>Features:</strong></p>
+                <p><strong>Strategic Purpose:</strong> Explored how multimodal retrieval systems can improve discovery, classification, and semantic search across large collections of unstructured visual assets.</p>
+
+                <p><strong>System Design:</strong></p>
                 <ul>
-                    <li>Downloads and normalizes images (JPEG/PNG) from an S3 bucket.</li>
-                    <li>Generates robust multimodal embeddings (shared space for text &amp; images) using Amazon Bedrock Titan models.</li>
-                    <li>Stores vectors in a persistent vector database (ChromaDB) for scalable semantic search.</li>
-                    <li>Supports natural language queries such as "Find images with a blue car" or "Show cars on the beach".</li>
-                    <li>Optional integration with OpenAI Vision models to produce human-readable summaries referencing labeled image results.</li>
+                    <li>Processed and normalized image collections stored in Amazon S3 to support scalable ingestion workflows.</li>
+                    <li>Generated multimodal embeddings using Amazon Bedrock Titan models to connect natural language and visual content within the same semantic vector space.</li>
+                    <li>Stored vectors in ChromaDB to support similarity search, semantic retrieval, and contextual ranking.</li>
+                    <li>Integrated optional OpenAI vision capabilities to generate human-readable summaries and contextual explanations of retrieved results.</li>
                 </ul>
-                <p><strong>Challenges &amp; Complexity:</strong></p>
+
+                <p><strong>Enterprise Relevance:</strong></p>
                 <ul>
-                    <li>Handling a heterogeneous image dataset and preventing embedding model failures via normalization.</li>
-                    <li>Designing efficient batching and caching strategies to control API usage costs.</li>
-                    <li>Building a retrieval interface that gracefully handles ambiguous or partial queries.</li>
+                    <li>Demonstrates how AI-driven retrieval systems can improve searchability across image libraries, digital assets, product catalogs, operational archives, and content repositories.</li>
+                    <li>Supports use cases such as visual asset discovery, metadata enrichment, content classification, and AI-assisted search experiences.</li>
+                    <li>Highlights how multimodal embeddings can reduce dependency on rigid tagging systems and manual categorization workflows.</li>
                 </ul>
-                <p><strong>Impact &amp; Achievements:</strong></p>
+
+                <p><strong>What This Proves:</strong></p>
                 <ul>
-                    <li>Demonstrated seamless semantic image search across thousands of images using simple natural language.</li>
-                    <li>Reduced false matches and improved relevance through multimodal embeddings.</li>
-                    <li>Enabled interpretable outputs by combining retrieval with generative vision summaries.</li>
-                    <li>Provides a foundation for extending the same pipeline to video RAG and multimodal search apps.</li>
+                    <li>Semantic retrieval can significantly improve discovery across unstructured image collections.</li>
+                    <li>Multimodal AI systems create more intuitive and human-centered search experiences.</li>
+                    <li>The architecture provides a scalable foundation for broader multimodal intelligence systems, including video, operational telemetry, and AI-assisted enterprise search.</li>
                 </ul>
+
                 <p><a href="https://github.com/gtapia75/s3-bedrock-text-rag" target="_blank" class="btn btn-outline">View on GitHub</a></p>
             </div>
 
             <div class="project-card fade-in">
                 <h3>RAG Implementation with Python and Anthropic</h3>
-                <p><strong>Overview:</strong> Implemented a Retrieval-Augmented Generation (RAG) system using Python, integrating Anthropic's Claude API for language model capabilities along with various other technologies for document processing and vector search.</p>
-                <p><strong>Features:</strong></p>
+                <p><strong>Strategic Purpose:</strong> Explored how Retrieval-Augmented Generation (RAG) architectures can improve response accuracy, reduce hallucination risk, and create more trustworthy enterprise AI experiences.</p>
+
+                <p><strong>System Design:</strong></p>
                 <ul>
-                    <li>Document processing and text extraction from PDFs.</li>
-                    <li>Text chunking for optimal context handling.</li>
-                    <li>Vector storage and semantic search using ChromaDB.</li>
-                    <li>Integration with Anthropic's Claude API for enhanced responses.</li>
-                    <li>Support for metadata and URL preservation.</li>
+                    <li>Processed and indexed PDF-based knowledge sources using Python document extraction pipelines.</li>
+                    <li>Implemented chunking and semantic retrieval workflows optimized for contextual relevance and efficient prompt augmentation.</li>
+                    <li>Stored embeddings in ChromaDB to support vector similarity search across enterprise-style documentation.</li>
+                    <li>Integrated Anthropic Claude models to generate context-aware responses grounded in retrieved source material.</li>
                 </ul>
-                <p><strong>Challenges &amp; Complexity:</strong></p>
+
+                <p><strong>Enterprise Relevance:</strong></p>
                 <ul>
-                    <li>Processed PDF files and created text chunks.</li>
-                    <li>Stored vectors in ChromaDB and identified similar chunks for user queries.</li>
+                    <li>Demonstrates how organizations can connect proprietary knowledge sources to large language models in a more controlled and reliable way.</li>
+                    <li>Supports enterprise use cases such as internal knowledge assistants, documentation search, operational guidance, and AI-enabled support systems.</li>
+                    <li>Highlights the importance of retrieval grounding as a strategy for improving trustworthiness in enterprise AI systems.</li>
                 </ul>
-                <p><strong>Impact &amp; Achievements:</strong></p>
+
+                <p><strong>What This Proves:</strong></p>
                 <ul>
-                    <li>Leveraged specialized data sources to provide context to the LLM, reducing hallucination risks.</li>
-                    <li>Provided structured responses using Anthropic's NLP capabilities.</li>
+                    <li>RAG architectures can significantly improve contextual relevance and reduce hallucination risks in LLM interactions.</li>
+                    <li>Semantic retrieval creates a scalable bridge between enterprise knowledge repositories and generative AI interfaces.</li>
+                    <li>The architecture establishes a foundation for AI-enabled operational assistants, analytics guidance systems, and enterprise search platforms.</li>
                 </ul>
+
                 <p><a href="https://github.com/gtapia75/RAG_Project" target="_blank" class="btn btn-outline">View on GitHub</a></p>
             </div>
 
             <div class="project-card fade-in">
                 <h3>AI Agent Car Compare Solution</h3>
-                <p><strong>Overview:</strong> Developed an AI-powered chatbot solution that provides intelligent car comparisons. This solution leverages ChromaDB for data storage, Anthropic's Claude LLM for natural language processing, and a sophisticated comparison engine to offer users insights based on specific car specifications.</p>
-                <p><strong>Features:</strong></p>
+                <p><strong>Strategic Purpose:</strong> Explored how domain-specific AI assistants can combine retrieval systems, structured knowledge, and LLM reasoning to support more accurate and contextual decision-making experiences.</p>
+
+                <p><strong>System Design:</strong></p>
                 <ul>
-                    <li>Multi-car comparison across various specifications</li>
-                    <li>Natural language understanding for user queries</li>
-                    <li>Detailed comparisons of technical specifications, safety ratings, comfort, and tech features</li>
-                    <li>AI-powered intelligent analysis and recommendations</li>
-                    <li>Real-time and flexible querying capabilities</li>
-                    <li>Comprehensive data processing for structured responses</li>
+                    <li>Processed large collections of automotive specification documents and transformed them into searchable semantic knowledge sources.</li>
+                    <li>Implemented vector retrieval workflows using ChromaDB to support contextual comparison across vehicles, features, and specifications.</li>
+                    <li>Integrated Anthropic Claude models to generate conversational responses grounded in retrieved automotive data.</li>
+                    <li>Designed the architecture to support flexible natural language interactions and multi-attribute comparison workflows.</li>
                 </ul>
-                <p><strong>Challenges &amp; Complexity:</strong></p>
+
+                <p><strong>Enterprise Relevance:</strong></p>
                 <ul>
-                    <li>Processing large amounts of car specification data from PDFs</li>
-                    <li>Creating text chunks and vectorizing them for semantic search</li>
-                    <li>Identifying relevant chunks for user queries and integrating with Claude LLM for human-like responses</li>
+                    <li>Demonstrates how AI assistants can support domain-specific knowledge interaction without relying exclusively on generalized LLM responses.</li>
+                    <li>Supports use cases such as guided recommendations, product comparison systems, technical support assistants, and AI-enabled advisory experiences.</li>
+                    <li>Highlights how retrieval grounding can improve trustworthiness and contextual relevance in conversational AI systems.</li>
                 </ul>
-                <p><strong>Impact &amp; Achievements:</strong></p>
+
+                <p><strong>What This Proves:</strong></p>
                 <ul>
-                    <li>Enabled users to receive precise answers based on specific car knowledge domains</li>
-                    <li>Reduced response time for car comparison insights, improving user experience</li>
-                    <li>Reduced the risk of hallucinations by using domain-specific data for context</li>
+                    <li>Domain-specific AI systems can significantly improve contextual accuracy and user trust.</li>
+                    <li>Retrieval-enhanced architectures create more reliable conversational experiences than standalone LLM interactions.</li>
+                    <li>The approach can extend beyond automotive use cases into enterprise operations, analytics guidance, support systems, and AI-assisted decision platforms.</li>
                 </ul>
+
                 <p><a href="https://github.com/gtapia75/AI_Agents_CarCompare" target="_blank" class="btn btn-outline">View on GitHub</a></p>
             </div>
 
@@ -220,10 +246,12 @@
         <div class="footer-content">
             <nav class="footer-links">
                 <a href="index.html#about">About</a>
-                <a href="index.html#projects">Projects</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="index.html#certifications">Certifications</a>
-                <a href="index.html#ai-ml">AI/ML</a>
+                <a href="index.html#impact">Impact</a>
+                <a href="index.html#projects">Programs</a>
+                <a href="index.html#skills">Leadership Capabilities</a>
+                <a href="index.html#ai-ml">AI &amp; Data</a>
+                <a href="index.html#certifications">Credentials</a>
+                <a href="mailto:gertapia75@gmail.com">Contact</a>
             </nav>
             <p class="footer-copy">&copy; 2026 Gerardo Tapia Cruz. All rights reserved.</p>
         </div>
